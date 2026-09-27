@@ -1,14 +1,8 @@
 # Angular login and registration
 
-Complete components, HTML templates, and component styles.
-
-This page contains **complete file contents** for 5 files. Copy each block to the exact path shown. The code is embedded in this Markdown page and remains visible when the sample source directory is unavailable.
-
-Return to [all source files](/source/) or read [setup instructions](/start). The [source bundle](/sample-source.zip) also includes binary icons and license files.
-
 ## `sample/Frontend/src/app/features/auth/login/login.component.html`
 
-**File:** `sample/Frontend/src/app/features/auth/login/login.component.html` — **Use:** Renders the markup for this Angular screen.
+Renders the markup for this Angular screen.
 
 ```html
 <main class="login-page d-flex align-items-center py-5">
@@ -49,7 +43,7 @@ Return to [all source files](/source/) or read [setup instructions](/start). The
 
 ## `sample/Frontend/src/app/features/auth/login/login.component.scss`
 
-**File:** `sample/Frontend/src/app/features/auth/login/login.component.scss` — **Use:** Styles this page or application.
+Styles this page or application.
 
 ```scss
 .login-page {
@@ -60,7 +54,7 @@ Return to [all source files](/source/) or read [setup instructions](/start). The
 
 ## `sample/Frontend/src/app/features/auth/login/login.component.ts`
 
-**File:** `sample/Frontend/src/app/features/auth/login/login.component.ts` — **Use:** Implements the behavior for this Angular screen or shared control.
+Implements the behavior for this Angular screen or shared control.
 
 ```typescript
 import { Component } from '@angular/core';
@@ -107,7 +101,7 @@ export class LoginComponent {
 
 ## `sample/Frontend/src/app/features/auth/register/register.component.html`
 
-**File:** `sample/Frontend/src/app/features/auth/register/register.component.html` — **Use:** Renders the markup for this Angular screen.
+Renders the markup for this Angular screen.
 
 ```html
 <main class="login-page d-flex align-items-center py-5">
@@ -154,7 +148,7 @@ export class LoginComponent {
 
 ## `sample/Frontend/src/app/features/auth/register/register.component.ts`
 
-**File:** `sample/Frontend/src/app/features/auth/register/register.component.ts` — **Use:** Implements the behavior for this Angular screen or shared control.
+Implements the behavior for this Angular screen or shared control.
 
 ```typescript
 import { Component } from '@angular/core';

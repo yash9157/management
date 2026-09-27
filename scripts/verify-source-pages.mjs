@@ -27,7 +27,7 @@ for (const page of await readdir(docsRoot)) {
   if (!page.endsWith('.md') || page === 'index.md') continue
   const lines = (await readFile(path.join(docsRoot, page), 'utf8')).split('\n')
   for (let index = 0; index < lines.length; index++) {
-    const match = lines[index].match(/^\*\*File:\*\* `([^`]+)` — \*\*Use:\*\*/)
+    const match = lines[index].match(/^## `([^`]+)`$/)
     if (!match) continue
     const relative = match[1]
     if (embedded.has(relative)) throw new Error(`Duplicate code block: ${relative}`)

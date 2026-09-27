@@ -1,14 +1,8 @@
 # Angular models and core services
 
-Complete API models, authentication state, HTTP services, guards, and interceptor.
-
-This page contains **complete file contents** for 10 files. Copy each block to the exact path shown. The code is embedded in this Markdown page and remains visible when the sample source directory is unavailable.
-
-Return to [all source files](/source/) or read [setup instructions](/start). The [source bundle](/sample-source.zip) also includes binary icons and license files.
-
 ## `sample/Frontend/src/app/core/guards/admin.guard.ts`
 
-**File:** `sample/Frontend/src/app/core/guards/admin.guard.ts` — **Use:** Controls navigation to protected Angular routes.
+Controls navigation to protected Angular routes.
 
 ```typescript
 import { inject } from '@angular/core';
@@ -25,7 +19,7 @@ export const adminGuard: CanActivateFn = () => {
 
 ## `sample/Frontend/src/app/core/guards/auth.guard.ts`
 
-**File:** `sample/Frontend/src/app/core/guards/auth.guard.ts` — **Use:** Controls navigation to protected Angular routes.
+Controls navigation to protected Angular routes.
 
 ```typescript
 import { inject } from '@angular/core';
@@ -40,7 +34,7 @@ export const authGuard: CanActivateFn = () => {
 
 ## `sample/Frontend/src/app/core/interceptors/auth.interceptor.ts`
 
-**File:** `sample/Frontend/src/app/core/interceptors/auth.interceptor.ts` — **Use:** Adds authentication to requests and handles unauthenticated responses.
+Adds authentication to requests and handles unauthenticated responses.
 
 ```typescript
 import { HttpErrorResponse, HttpInterceptorFn } from '@angular/common/http';
@@ -68,7 +62,7 @@ export const authInterceptor: HttpInterceptorFn = (request, next) => {
 
 ## `sample/Frontend/src/app/core/models/auth.model.ts`
 
-**File:** `sample/Frontend/src/app/core/models/auth.model.ts` — **Use:** Defines typed data exchanged with the API.
+Defines typed data exchanged with the API.
 
 ```typescript
 export interface LoginResponse { accessToken: string; expiresAtUtc: string; username: string; role: string; }
@@ -79,7 +73,7 @@ export interface RegisterResponse { username: string; role: string; }
 
 ## `sample/Frontend/src/app/core/models/employee.model.ts`
 
-**File:** `sample/Frontend/src/app/core/models/employee.model.ts` — **Use:** Defines typed data exchanged with the API.
+Defines typed data exchanged with the API.
 
 ```typescript
 export interface LookupItem { id: number; name: string; }
@@ -136,7 +130,7 @@ export interface DepartmentEmployeeCount { departmentId: number; departmentName:
 
 ## `sample/Frontend/src/app/core/services/auth.service.ts`
 
-**File:** `sample/Frontend/src/app/core/services/auth.service.ts` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```typescript
 import { HttpClient } from '@angular/common/http';
@@ -204,7 +198,7 @@ export class AuthService {
 
 ## `sample/Frontend/src/app/core/services/dashboard.service.ts`
 
-**File:** `sample/Frontend/src/app/core/services/dashboard.service.ts` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```typescript
 import { HttpClient } from '@angular/common/http';
@@ -223,7 +217,7 @@ export class DashboardService {
 
 ## `sample/Frontend/src/app/core/services/employee.service.ts`
 
-**File:** `sample/Frontend/src/app/core/services/employee.service.ts` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```typescript
 import { HttpClient, HttpParams } from '@angular/common/http';
@@ -265,7 +259,7 @@ export class EmployeeService {
 
 ## `sample/Frontend/src/app/core/services/lookup.service.ts`
 
-**File:** `sample/Frontend/src/app/core/services/lookup.service.ts` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```typescript
 import { HttpClient } from '@angular/common/http';
@@ -284,7 +278,7 @@ export class LookupService {
 
 ## `sample/Frontend/src/app/core/services/notification.service.ts`
 
-**File:** `sample/Frontend/src/app/core/services/notification.service.ts` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```typescript
 import { Injectable } from '@angular/core';

@@ -1,14 +1,8 @@
 # Angular project and bootstrap
 
-Complete package manifest, Angular/TypeScript configuration, entry points, routes, and app shell.
-
-This page contains **complete file contents** for 19 files. Copy each block to the exact path shown. The code is embedded in this Markdown page and remains visible when the sample source directory is unavailable.
-
-Return to [all source files](/source/) or read [setup instructions](/start). The [source bundle](/sample-source.zip) also includes binary icons and license files.
-
 ## `sample/Frontend/.editorconfig`
 
-**File:** `sample/Frontend/.editorconfig` — **Use:** Configures editor, formatting, or ignored development files.
+Configures editor, formatting, or ignored development files.
 
 ```text
 # Editor configuration, see https://editorconfig.org
@@ -32,7 +26,7 @@ trim_trailing_whitespace = false
 
 ## `sample/Frontend/.gitignore`
 
-**File:** `sample/Frontend/.gitignore` — **Use:** Configures editor, formatting, or ignored development files.
+Configures editor, formatting, or ignored development files.
 
 ```text
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
@@ -83,7 +77,7 @@ Thumbs.db
 
 ## `sample/Frontend/.prettierrc`
 
-**File:** `sample/Frontend/.prettierrc` — **Use:** Configures editor, formatting, or ignored development files.
+Configures editor, formatting, or ignored development files.
 
 ```text
 {
@@ -102,7 +96,7 @@ Thumbs.db
 
 ## `sample/Frontend/.vscode/extensions.json`
 
-**File:** `sample/Frontend/.vscode/extensions.json` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```json
 {
@@ -113,7 +107,7 @@ Thumbs.db
 
 ## `sample/Frontend/.vscode/launch.json`
 
-**File:** `sample/Frontend/.vscode/launch.json` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```json
 {
@@ -140,7 +134,7 @@ Thumbs.db
 
 ## `sample/Frontend/.vscode/mcp.json`
 
-**File:** `sample/Frontend/.vscode/mcp.json` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```json
 {
@@ -156,7 +150,7 @@ Thumbs.db
 
 ## `sample/Frontend/.vscode/tasks.json`
 
-**File:** `sample/Frontend/.vscode/tasks.json` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```json
 {
@@ -205,7 +199,7 @@ Thumbs.db
 
 ## `sample/Frontend/angular.json`
 
-**File:** `sample/Frontend/angular.json` — **Use:** Configures Angular build, assets, styles, and test targets.
+Configures Angular build, assets, styles, and test targets.
 
 ```json
 {
@@ -291,7 +285,7 @@ Thumbs.db
 
 ## `sample/Frontend/package.json`
 
-**File:** `sample/Frontend/package.json` — **Use:** Defines Angular dependencies and npm commands.
+Defines Angular dependencies and npm commands.
 
 ```json
 {
@@ -332,7 +326,7 @@ Thumbs.db
 
 ## `sample/Frontend/README.md`
 
-**File:** `sample/Frontend/README.md` — **Use:** Provides the sample project’s original README instructions.
+Provides the sample project’s original README instructions.
 
 ````markdown
 # EmployeeManagementUi
@@ -398,7 +392,7 @@ For more information on using the Angular CLI, including detailed command refere
 
 ## `sample/Frontend/src/app/app.config.ts`
 
-**File:** `sample/Frontend/src/app/app.config.ts` — **Use:** Registers Angular router and HTTP services.
+Registers Angular router and HTTP services.
 
 ```typescript
 import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection } from '@angular/core';
@@ -420,7 +414,7 @@ export const appConfig: ApplicationConfig = {
 
 ## `sample/Frontend/src/app/app.html`
 
-**File:** `sample/Frontend/src/app/app.html` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```html
 @if (authService.currentUser$ | async; as user) {
@@ -443,7 +437,7 @@ export const appConfig: ApplicationConfig = {
 
 ## `sample/Frontend/src/app/app.routes.ts`
 
-**File:** `sample/Frontend/src/app/app.routes.ts` — **Use:** Maps Angular URLs to pages and guards.
+Maps Angular URLs to pages and guards.
 
 ```typescript
 import { Routes } from '@angular/router';
@@ -465,7 +459,7 @@ export const routes: Routes = [
 
 ## `sample/Frontend/src/app/app.ts`
 
-**File:** `sample/Frontend/src/app/app.ts` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```typescript
 import { AsyncPipe } from '@angular/common';
@@ -492,7 +486,7 @@ export class App {
 
 ## `sample/Frontend/src/environments/environment.ts`
 
-**File:** `sample/Frontend/src/environments/environment.ts` — **Use:** Defines the API base URL used by Angular.
+Defines the API base URL used by Angular.
 
 ```typescript
 export const environment = { apiUrl: 'http://localhost:5087/api' };
@@ -500,7 +494,7 @@ export const environment = { apiUrl: 'http://localhost:5087/api' };
 
 ## `sample/Frontend/src/index.html`
 
-**File:** `sample/Frontend/src/index.html` — **Use:** Hosts the Angular application root.
+Hosts the Angular application root.
 
 ```html
 <!doctype html>
@@ -520,7 +514,7 @@ export const environment = { apiUrl: 'http://localhost:5087/api' };
 
 ## `sample/Frontend/src/main.ts`
 
-**File:** `sample/Frontend/src/main.ts` — **Use:** Bootstraps the Angular application.
+Bootstraps the Angular application.
 
 ```typescript
 import { bootstrapApplication } from '@angular/platform-browser';
@@ -533,7 +527,7 @@ bootstrapApplication(App, appConfig)
 
 ## `sample/Frontend/tsconfig.app.json`
 
-**File:** `sample/Frontend/tsconfig.app.json` — **Use:** Configures TypeScript compilation for this target.
+Configures TypeScript compilation for this target.
 
 ```json
 /* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
@@ -555,7 +549,7 @@ bootstrapApplication(App, appConfig)
 
 ## `sample/Frontend/tsconfig.json`
 
-**File:** `sample/Frontend/tsconfig.json` — **Use:** Configures TypeScript compilation for this target.
+Configures TypeScript compilation for this target.
 
 ```json
 /* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */

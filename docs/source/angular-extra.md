@@ -1,14 +1,8 @@
 # Other Angular files
 
-Complete remaining Angular component, template, and application styles.
-
-This page contains **complete file contents** for 4 files. Copy each block to the exact path shown. The code is embedded in this Markdown page and remains visible when the sample source directory is unavailable.
-
-Return to [all source files](/source/) or read [setup instructions](/start). The [source bundle](/sample-source.zip) also includes binary icons and license files.
-
 ## `sample/Frontend/src/app/app.scss`
 
-**File:** `sample/Frontend/src/app/app.scss` — **Use:** Styles this page or application.
+Styles this page or application.
 
 ```scss
 .navbar-brand { letter-spacing: .01em; }
@@ -16,7 +10,7 @@ Return to [all source files](/source/) or read [setup instructions](/start). The
 
 ## `sample/Frontend/src/app/features/dashboard/dashboard.component.html`
 
-**File:** `sample/Frontend/src/app/features/dashboard/dashboard.component.html` — **Use:** Renders the markup for this Angular screen.
+Renders the markup for this Angular screen.
 
 ```html
 <main class="container py-4">
@@ -51,7 +45,7 @@ Return to [all source files](/source/) or read [setup instructions](/start). The
 
 ## `sample/Frontend/src/app/features/dashboard/dashboard.component.ts`
 
-**File:** `sample/Frontend/src/app/features/dashboard/dashboard.component.ts` — **Use:** Implements the behavior for this Angular screen or shared control.
+Implements the behavior for this Angular screen or shared control.
 
 ```typescript
 import { DecimalPipe } from '@angular/common';
@@ -88,7 +82,7 @@ export class DashboardComponent implements OnInit {
 
 ## `sample/Frontend/src/styles.scss`
 
-**File:** `sample/Frontend/src/styles.scss` — **Use:** Styles this page or application.
+Styles this page or application.
 
 ```scss
 @import 'bootstrap/dist/css/bootstrap.min.css';

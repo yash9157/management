@@ -1,14 +1,8 @@
 # Angular employee screens
 
-Complete list, detail, form, and shared UI components.
-
-This page contains **complete file contents** for 9 files. Copy each block to the exact path shown. The code is embedded in this Markdown page and remains visible when the sample source directory is unavailable.
-
-Return to [all source files](/source/) or read [setup instructions](/start). The [source bundle](/sample-source.zip) also includes binary icons and license files.
-
 ## `sample/Frontend/src/app/features/employees/employee-detail/employee-detail.component.html`
 
-**File:** `sample/Frontend/src/app/features/employees/employee-detail/employee-detail.component.html` — **Use:** Renders the markup for this Angular screen.
+Renders the markup for this Angular screen.
 
 ```html
 <main class="container py-4">
@@ -41,7 +35,7 @@ Return to [all source files](/source/) or read [setup instructions](/start). The
 
 ## `sample/Frontend/src/app/features/employees/employee-detail/employee-detail.component.ts`
 
-**File:** `sample/Frontend/src/app/features/employees/employee-detail/employee-detail.component.ts` — **Use:** Implements the behavior for this Angular screen or shared control.
+Implements the behavior for this Angular screen or shared control.
 
 ```typescript
 import { CurrencyPipe, DatePipe } from '@angular/common';
@@ -82,7 +76,7 @@ export class EmployeeDetailComponent implements OnInit {
 
 ## `sample/Frontend/src/app/features/employees/employee-form/employee-form.component.html`
 
-**File:** `sample/Frontend/src/app/features/employees/employee-form/employee-form.component.html` — **Use:** Renders the markup for this Angular screen.
+Renders the markup for this Angular screen.
 
 ```html
 <main class="container py-4">
@@ -114,7 +108,7 @@ export class EmployeeDetailComponent implements OnInit {
 
 ## `sample/Frontend/src/app/features/employees/employee-form/employee-form.component.ts`
 
-**File:** `sample/Frontend/src/app/features/employees/employee-form/employee-form.component.ts` — **Use:** Implements the behavior for this Angular screen or shared control.
+Implements the behavior for this Angular screen or shared control.
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
@@ -242,7 +236,7 @@ export class EmployeeFormComponent implements OnInit {
 
 ## `sample/Frontend/src/app/features/employees/employee-list/employee-list.component.html`
 
-**File:** `sample/Frontend/src/app/features/employees/employee-list/employee-list.component.html` — **Use:** Renders the markup for this Angular screen.
+Renders the markup for this Angular screen.
 
 ```html
 <main class="container py-4">
@@ -338,7 +332,7 @@ export class EmployeeFormComponent implements OnInit {
 
 ## `sample/Frontend/src/app/features/employees/employee-list/employee-list.component.ts`
 
-**File:** `sample/Frontend/src/app/features/employees/employee-list/employee-list.component.ts` — **Use:** Implements the behavior for this Angular screen or shared control.
+Implements the behavior for this Angular screen or shared control.
 
 ```typescript
 import { CurrencyPipe, DatePipe } from '@angular/common';
@@ -458,7 +452,7 @@ export class EmployeeListComponent implements OnInit, OnDestroy {
 
 ## `sample/Frontend/src/app/shared/confirm-dialog/confirm-dialog.component.ts`
 
-**File:** `sample/Frontend/src/app/shared/confirm-dialog/confirm-dialog.component.ts` — **Use:** Implements the behavior for this Angular screen or shared control.
+Implements the behavior for this Angular screen or shared control.
 
 ```typescript
 import { Component, EventEmitter, Input, Output } from '@angular/core';
@@ -494,7 +488,7 @@ export class ConfirmDialogComponent {
 
 ## `sample/Frontend/src/app/shared/notification/notification.component.ts`
 
-**File:** `sample/Frontend/src/app/shared/notification/notification.component.ts` — **Use:** Implements the behavior for this Angular screen or shared control.
+Implements the behavior for this Angular screen or shared control.
 
 ```typescript
 import { AsyncPipe } from '@angular/common';
@@ -521,7 +515,7 @@ export class NotificationComponent {
 
 ## `sample/Frontend/src/app/shared/pagination/pagination.component.ts`
 
-**File:** `sample/Frontend/src/app/shared/pagination/pagination.component.ts` — **Use:** Implements the behavior for this Angular screen or shared control.
+Implements the behavior for this Angular screen or shared control.
 
 ```typescript
 import { Component, EventEmitter, Input, Output } from '@angular/core';

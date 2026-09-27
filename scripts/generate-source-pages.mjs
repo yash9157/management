@@ -9,24 +9,24 @@ const allowedExtensions = new Set(['.cs', '.cshtml', '.ts', '.html', '.scss', '.
 const allowedNames = new Set(['.gitignore', '.editorconfig', '.prettierrc'])
 
 const pages = {
-  'api-project': ['API project and startup', 'Project file, configuration, launch profiles, tools, HTTP examples, and application bootstrap.'],
-  'api-contracts': ['API entities and contracts', 'Complete model, DTO, and service interface files.'],
-  'api-data': ['API EF Core and migration', 'Complete DbContext, initializer, migration, and stored procedure.'],
-  'api-services': ['API controllers and services', 'Complete routes, authentication, employee CRUD, reporting, and error middleware.'],
-  'api-generated': ['API migration metadata', 'Complete generated designer and model snapshot files used by EF Core tooling.'],
-  'angular-project': ['Angular project and bootstrap', 'Complete package manifest, Angular/TypeScript configuration, entry points, routes, and app shell.'],
-  'angular-lockfile': ['Angular dependency lockfile', 'Complete npm lockfile required for reproducible npm ci installs.'],
-  'angular-core': ['Angular models and core services', 'Complete API models, authentication state, HTTP services, guards, and interceptor.'],
-  'angular-auth': ['Angular login and registration', 'Complete components, HTML templates, and component styles.'],
-  'angular-employees': ['Angular employee screens', 'Complete list, detail, form, and shared UI components.'],
-  'angular-extra': ['Other Angular files', 'Complete remaining Angular component, template, and application styles.'],
-  'angular-tests': ['Angular tests', 'Complete checked-in component tests and test TypeScript configuration.'],
-  'mvc-project': ['MVC project and startup', 'Complete project, solution, configuration, launch profile, tools, and application startup.'],
-  'mvc-data': ['MVC models, view models, and migration', 'Complete EF Core mapping, entities, form/list models, and schema migration.'],
-  'mvc-controller': ['MVC controllers', 'Complete CRUD and home controllers.'],
-  'mvc-views': ['MVC Razor views and assets', 'Complete Razor pages, form partial, layout, styles, and application JavaScript.'],
-  'mvc-vendor': ['MVC bundled JavaScript', 'Complete checked-in third-party JavaScript files used by Razor form validation.'],
-  'mvc-generated': ['MVC migration metadata', 'Complete generated designer and model snapshot files used by EF Core tooling.']
+  'api-project': 'API project and startup',
+  'api-contracts': 'API entities and contracts',
+  'api-data': 'API EF Core and migration',
+  'api-services': 'API controllers and services',
+  'api-generated': 'API migration metadata',
+  'angular-project': 'Angular project and bootstrap',
+  'angular-lockfile': 'Angular dependency lockfile',
+  'angular-core': 'Angular models and core services',
+  'angular-auth': 'Angular login and registration',
+  'angular-employees': 'Angular employee screens',
+  'angular-extra': 'Other Angular files',
+  'angular-tests': 'Angular tests',
+  'mvc-project': 'MVC project and startup',
+  'mvc-data': 'MVC models, view models, and migration',
+  'mvc-controller': 'MVC controllers',
+  'mvc-views': 'MVC Razor views and assets',
+  'mvc-vendor': 'MVC bundled JavaScript',
+  'mvc-generated': 'MVC migration metadata'
 }
 
 async function walk(directory) {
@@ -149,21 +149,12 @@ for (const file of files) {
 }
 
 await mkdir(output, { recursive: true })
-for (const [key, [title, description]] of Object.entries(pages)) {
+for (const [key, title] of Object.entries(pages)) {
   const entries = groups.get(key)
   if (entries.length === 0) throw new Error(`Empty source page: ${key}`)
-  const lines = [
-    `# ${title}`,
-    '',
-    description,
-    '',
-    `This page contains **complete file contents** for ${entries.length} files. Copy each block to the exact path shown. The code is embedded in this Markdown page and remains visible when the sample source directory is unavailable.`,
-    '',
-    'Return to [all source files](/source/) or read [setup instructions](/start). The [source bundle](/sample-source.zip) also includes binary icons and license files.',
-    ''
-  ]
+  const lines = [`# ${title}`, '']
   for (const { relative, content, fence } of entries) {
-    lines.push(`## \`${relative}\``, '', `**File:** \`${relative}\` — **Use:** ${purpose(relative)}`, '', `${fence}${language(relative)}`, content, fence, '')
+    lines.push(`## \`${relative}\``, '', purpose(relative), '', `${fence}${language(relative)}`, content, fence, '')
   }
   await writeFile(path.join(output, `${key}.md`), lines.join('\n'), 'utf8')
 }

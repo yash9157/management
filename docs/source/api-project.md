@@ -1,14 +1,8 @@
 # API project and startup
 
-Project file, configuration, launch profiles, tools, HTTP examples, and application bootstrap.
-
-This page contains **complete file contents** for 7 files. Copy each block to the exact path shown. The code is embedded in this Markdown page and remains visible when the sample source directory is unavailable.
-
-Return to [all source files](/source/) or read [setup instructions](/start). The [source bundle](/sample-source.zip) also includes binary icons and license files.
-
 ## `sample/EmployeeManagement.Api/appsettings.Development.json`
 
-**File:** `sample/EmployeeManagement.Api/appsettings.Development.json` — **Use:** Supplies application settings for this environment; development values are for local practice.
+Supplies application settings for this environment; development values are for local practice.
 
 ```json
 {
@@ -39,7 +33,7 @@ Return to [all source files](/source/) or read [setup instructions](/start). The
 
 ## `sample/EmployeeManagement.Api/appsettings.json`
 
-**File:** `sample/EmployeeManagement.Api/appsettings.json` — **Use:** Supplies application settings for this environment; development values are for local practice.
+Supplies application settings for this environment; development values are for local practice.
 
 ```json
 {
@@ -63,7 +57,7 @@ Return to [all source files](/source/) or read [setup instructions](/start). The
 
 ## `sample/EmployeeManagement.Api/dotnet-tools.json`
 
-**File:** `sample/EmployeeManagement.Api/dotnet-tools.json` — **Use:** Pins the local EF Core command-line tool.
+Pins the local EF Core command-line tool.
 
 ```json
 {
@@ -83,7 +77,7 @@ Return to [all source files](/source/) or read [setup instructions](/start). The
 
 ## `sample/EmployeeManagement.Api/EmployeeManagement.Api.csproj`
 
-**File:** `sample/EmployeeManagement.Api/EmployeeManagement.Api.csproj` — **Use:** Defines the .NET target framework and NuGet dependencies.
+Defines the .NET target framework and NuGet dependencies.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.Web">
@@ -110,7 +104,7 @@ Return to [all source files](/source/) or read [setup instructions](/start). The
 
 ## `sample/EmployeeManagement.Api/EmployeeManagement.Api.http`
 
-**File:** `sample/EmployeeManagement.Api/EmployeeManagement.Api.http` — **Use:** Provides runnable API request examples.
+Provides runnable API request examples.
 
 ```http
 @baseUrl = http://localhost:5087/api
@@ -140,7 +134,7 @@ Authorization: Bearer {{token}}
 
 ## `sample/EmployeeManagement.Api/Program.cs`
 
-**File:** `sample/EmployeeManagement.Api/Program.cs` — **Use:** Configures services, middleware, routes, and development database migration.
+Configures services, middleware, routes, and development database migration.
 
 ```csharp
 using System.Text;
@@ -235,7 +229,7 @@ public partial class Program;
 
 ## `sample/EmployeeManagement.Api/Properties/launchSettings.json`
 
-**File:** `sample/EmployeeManagement.Api/Properties/launchSettings.json` — **Use:** Defines local HTTP and HTTPS launch profiles.
+Defines local HTTP and HTTPS launch profiles.
 
 ```json
 ﻿{

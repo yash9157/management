@@ -1,14 +1,8 @@
 # API entities and contracts
 
-Complete model, DTO, and service interface files.
-
-This page contains **complete file contents** for 10 files. Copy each block to the exact path shown. The code is embedded in this Markdown page and remains visible when the sample source directory is unavailable.
-
-Return to [all source files](/source/) or read [setup instructions](/start). The [source bundle](/sample-source.zip) also includes binary icons and license files.
-
 ## `sample/EmployeeManagement.Api/DTOs/AuthDtos.cs`
 
-**File:** `sample/EmployeeManagement.Api/DTOs/AuthDtos.cs` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```csharp
 using System.ComponentModel.DataAnnotations;
@@ -45,7 +39,7 @@ public record RegisterResponse(string Username, string Role);
 
 ## `sample/EmployeeManagement.Api/DTOs/CommonDtos.cs`
 
-**File:** `sample/EmployeeManagement.Api/DTOs/CommonDtos.cs` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```csharp
 using System.ComponentModel.DataAnnotations;
@@ -73,7 +67,7 @@ public record DashboardDto(int TotalEmployees, int ActiveEmployees, int Departme
 
 ## `sample/EmployeeManagement.Api/DTOs/EmployeeDtos.cs`
 
-**File:** `sample/EmployeeManagement.Api/DTOs/EmployeeDtos.cs` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```csharp
 using System.ComponentModel.DataAnnotations;
@@ -167,7 +161,7 @@ public class EmployeeQuery
 
 ## `sample/EmployeeManagement.Api/Interfaces/IEmployeeService.cs`
 
-**File:** `sample/EmployeeManagement.Api/Interfaces/IEmployeeService.cs` — **Use:** Implements Employee operations.
+Implements Employee operations.
 
 ```csharp
 using EmployeeManagement.Api.DTOs;
@@ -186,7 +180,7 @@ public interface IEmployeeService
 
 ## `sample/EmployeeManagement.Api/Models/AppUser.cs`
 
-**File:** `sample/EmployeeManagement.Api/Models/AppUser.cs` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```csharp
 using System.ComponentModel.DataAnnotations;
@@ -210,7 +204,7 @@ public class AppUser
 
 ## `sample/EmployeeManagement.Api/Models/Department.cs`
 
-**File:** `sample/EmployeeManagement.Api/Models/Department.cs` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```csharp
 using System.ComponentModel.DataAnnotations;
@@ -233,7 +227,7 @@ public class Department
 
 ## `sample/EmployeeManagement.Api/Models/DepartmentEmployeeCount.cs`
 
-**File:** `sample/EmployeeManagement.Api/Models/DepartmentEmployeeCount.cs` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```csharp
 namespace EmployeeManagement.Api.Models;
@@ -248,7 +242,7 @@ public class DepartmentEmployeeCount
 
 ## `sample/EmployeeManagement.Api/Models/Employee.cs`
 
-**File:** `sample/EmployeeManagement.Api/Models/Employee.cs` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```csharp
 using System.ComponentModel.DataAnnotations;
@@ -291,7 +285,7 @@ public class Employee
 
 ## `sample/EmployeeManagement.Api/Models/EmployeeSkill.cs`
 
-**File:** `sample/EmployeeManagement.Api/Models/EmployeeSkill.cs` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```csharp
 namespace EmployeeManagement.Api.Models;
@@ -307,7 +301,7 @@ public class EmployeeSkill
 
 ## `sample/EmployeeManagement.Api/Models/Skill.cs`
 
-**File:** `sample/EmployeeManagement.Api/Models/Skill.cs` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```csharp
 using System.ComponentModel.DataAnnotations;

@@ -1,14 +1,8 @@
 # Angular dependency lockfile
 
-Complete npm lockfile required for reproducible npm ci installs.
-
-This page contains **complete file contents** for 1 files. Copy each block to the exact path shown. The code is embedded in this Markdown page and remains visible when the sample source directory is unavailable.
-
-Return to [all source files](/source/) or read [setup instructions](/start). The [source bundle](/sample-source.zip) also includes binary icons and license files.
-
 ## `sample/Frontend/package-lock.json`
 
-**File:** `sample/Frontend/package-lock.json` — **Use:** Pins the complete npm dependency graph for reproducible installation.
+Pins the complete npm dependency graph for reproducible installation.
 
 ```text
 {

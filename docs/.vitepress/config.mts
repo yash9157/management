@@ -1,12 +1,12 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: 'Employee Management Lab',
-  description: 'Source-backed ASP.NET Core, EF Core, SQL Server, Angular, and MVC interview guide',
+  title: 'Employee Management',
+  description: 'Employee management source code and setup',
   cleanUrls: true,
   lastUpdated: true,
   themeConfig: {
-    siteTitle: 'Employee Management Lab',
+    siteTitle: 'Employee Management',
     nav: [
       { text: 'All files', link: '/source/' },
       { text: 'Setup', link: '/start' },
@@ -57,7 +57,6 @@ export default defineConfig({
     },
     search: { provider: 'local' },
     outline: { level: [2, 3] },
-    editLink: undefined,
-    footer: { message: 'Complete sample source, file by file', copyright: 'Employee Management interview practice' }
+    editLink: undefined
   }
 })

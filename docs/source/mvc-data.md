@@ -1,14 +1,8 @@
 # MVC models, view models, and migration
 
-Complete EF Core mapping, entities, form/list models, and schema migration.
-
-This page contains **complete file contents** for 7 files. Copy each block to the exact path shown. The code is embedded in this Markdown page and remains visible when the sample source directory is unavailable.
-
-Return to [all source files](/source/) or read [setup instructions](/start). The [source bundle](/sample-source.zip) also includes binary icons and license files.
-
 ## `sample/MvcEmployeeManagement/Data/AppDbContext.cs`
 
-**File:** `sample/MvcEmployeeManagement/Data/AppDbContext.cs` — **Use:** Maps entities, relationships, indexes, and seed data to SQL Server.
+Maps entities, relationships, indexes, and seed data to SQL Server.
 
 ```csharp
 using EmployeeManagement.Mvc.Models;
@@ -42,7 +36,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
 
 ## `sample/MvcEmployeeManagement/Data/Migrations/20260927154654_InitialCreate.cs`
 
-**File:** `sample/MvcEmployeeManagement/Data/Migrations/20260927154654_InitialCreate.cs` — **Use:** Creates the initial database schema and seeded reference data.
+Creates the initial database schema and seeded reference data.
 
 ```csharp
 ﻿using System;
@@ -140,7 +134,7 @@ namespace EmployeeManagement.Mvc.Data.Migrations
 
 ## `sample/MvcEmployeeManagement/Models/Department.cs`
 
-**File:** `sample/MvcEmployeeManagement/Models/Department.cs` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```csharp
 using System.ComponentModel.DataAnnotations;
@@ -160,7 +154,7 @@ public class Department
 
 ## `sample/MvcEmployeeManagement/Models/Employee.cs`
 
-**File:** `sample/MvcEmployeeManagement/Models/Employee.cs` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```csharp
 using System.ComponentModel.DataAnnotations;
@@ -206,7 +200,7 @@ public class Employee
 
 ## `sample/MvcEmployeeManagement/Models/ErrorViewModel.cs`
 
-**File:** `sample/MvcEmployeeManagement/Models/ErrorViewModel.cs` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```csharp
 namespace EmployeeManagement.Mvc.Models;
@@ -221,7 +215,7 @@ public class ErrorViewModel
 
 ## `sample/MvcEmployeeManagement/ViewModels/EmployeeFormViewModel.cs`
 
-**File:** `sample/MvcEmployeeManagement/ViewModels/EmployeeFormViewModel.cs` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```csharp
 using System.ComponentModel.DataAnnotations;
@@ -295,7 +289,7 @@ public class EmployeeFormViewModel : IValidatableObject
 
 ## `sample/MvcEmployeeManagement/ViewModels/EmployeeListViewModel.cs`
 
-**File:** `sample/MvcEmployeeManagement/ViewModels/EmployeeListViewModel.cs` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```csharp
 using EmployeeManagement.Mvc.Models;

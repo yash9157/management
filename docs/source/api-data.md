@@ -1,14 +1,8 @@
 # API EF Core and migration
 
-Complete DbContext, initializer, migration, and stored procedure.
-
-This page contains **complete file contents** for 3 files. Copy each block to the exact path shown. The code is embedded in this Markdown page and remains visible when the sample source directory is unavailable.
-
-Return to [all source files](/source/) or read [setup instructions](/start). The [source bundle](/sample-source.zip) also includes binary icons and license files.
-
 ## `sample/EmployeeManagement.Api/Data/AppDbContext.cs`
 
-**File:** `sample/EmployeeManagement.Api/Data/AppDbContext.cs` — **Use:** Maps entities, relationships, indexes, and seed data to SQL Server.
+Maps entities, relationships, indexes, and seed data to SQL Server.
 
 ```csharp
 using EmployeeManagement.Api.Models;
@@ -70,7 +64,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
 
 ## `sample/EmployeeManagement.Api/Data/DatabaseInitializer.cs`
 
-**File:** `sample/EmployeeManagement.Api/Data/DatabaseInitializer.cs` — **Use:** Applies the API migration and seeds local demo users.
+Applies the API migration and seeds local demo users.
 
 ```csharp
 using EmployeeManagement.Api.Models;
@@ -110,7 +104,7 @@ public class DatabaseInitializer(AppDbContext dbContext, IConfiguration configur
 
 ## `sample/EmployeeManagement.Api/Data/Migrations/20260927123728_InitialCreate.cs`
 
-**File:** `sample/EmployeeManagement.Api/Data/Migrations/20260927123728_InitialCreate.cs` — **Use:** Creates the initial database schema and seeded reference data.
+Creates the initial database schema and seeded reference data.
 
 ```csharp
 ﻿using System;

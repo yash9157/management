@@ -1,14 +1,8 @@
 # MVC Razor views and assets
 
-Complete Razor pages, form partial, layout, styles, and application JavaScript.
-
-This page contains **complete file contents** for 16 files. Copy each block to the exact path shown. The code is embedded in this Markdown page and remains visible when the sample source directory is unavailable.
-
-Return to [all source files](/source/) or read [setup instructions](/start). The [source bundle](/sample-source.zip) also includes binary icons and license files.
-
 ## `sample/MvcEmployeeManagement/Views/_ViewImports.cshtml`
 
-**File:** `sample/MvcEmployeeManagement/Views/_ViewImports.cshtml` — **Use:** Renders this Razor page or reusable partial.
+Renders this Razor page or reusable partial.
 
 ```html
 ﻿@using EmployeeManagement.Mvc
@@ -19,7 +13,7 @@ Return to [all source files](/source/) or read [setup instructions](/start). The
 
 ## `sample/MvcEmployeeManagement/Views/_ViewStart.cshtml`
 
-**File:** `sample/MvcEmployeeManagement/Views/_ViewStart.cshtml` — **Use:** Renders this Razor page or reusable partial.
+Renders this Razor page or reusable partial.
 
 ```html
 ﻿@{
@@ -29,7 +23,7 @@ Return to [all source files](/source/) or read [setup instructions](/start). The
 
 ## `sample/MvcEmployeeManagement/Views/Employees/_EmployeeForm.cshtml`
 
-**File:** `sample/MvcEmployeeManagement/Views/Employees/_EmployeeForm.cshtml` — **Use:** Renders this Razor page or reusable partial.
+Renders this Razor page or reusable partial.
 
 ```html
 @model EmployeeFormViewModel
@@ -111,7 +105,7 @@ Return to [all source files](/source/) or read [setup instructions](/start). The
 
 ## `sample/MvcEmployeeManagement/Views/Employees/Create.cshtml`
 
-**File:** `sample/MvcEmployeeManagement/Views/Employees/Create.cshtml` — **Use:** Renders this Razor page or reusable partial.
+Renders this Razor page or reusable partial.
 
 ```html
 @model EmployeeFormViewModel
@@ -134,7 +128,7 @@ Return to [all source files](/source/) or read [setup instructions](/start). The
 
 ## `sample/MvcEmployeeManagement/Views/Employees/Delete.cshtml`
 
-**File:** `sample/MvcEmployeeManagement/Views/Employees/Delete.cshtml` — **Use:** Renders this Razor page or reusable partial.
+Renders this Razor page or reusable partial.
 
 ```html
 @model Employee
@@ -156,7 +150,7 @@ Return to [all source files](/source/) or read [setup instructions](/start). The
 
 ## `sample/MvcEmployeeManagement/Views/Employees/Details.cshtml`
 
-**File:** `sample/MvcEmployeeManagement/Views/Employees/Details.cshtml` — **Use:** Renders this Razor page or reusable partial.
+Renders this Razor page or reusable partial.
 
 ```html
 @model Employee
@@ -194,7 +188,7 @@ Return to [all source files](/source/) or read [setup instructions](/start). The
 
 ## `sample/MvcEmployeeManagement/Views/Employees/Edit.cshtml`
 
-**File:** `sample/MvcEmployeeManagement/Views/Employees/Edit.cshtml` — **Use:** Renders this Razor page or reusable partial.
+Renders this Razor page or reusable partial.
 
 ```html
 @model EmployeeFormViewModel
@@ -217,7 +211,7 @@ Return to [all source files](/source/) or read [setup instructions](/start). The
 
 ## `sample/MvcEmployeeManagement/Views/Employees/Index.cshtml`
 
-**File:** `sample/MvcEmployeeManagement/Views/Employees/Index.cshtml` — **Use:** Renders this Razor page or reusable partial.
+Renders this Razor page or reusable partial.
 
 ```html
 @model EmployeeListViewModel
@@ -327,7 +321,7 @@ Return to [all source files](/source/) or read [setup instructions](/start). The
 
 ## `sample/MvcEmployeeManagement/Views/Home/Index.cshtml`
 
-**File:** `sample/MvcEmployeeManagement/Views/Home/Index.cshtml` — **Use:** Renders this Razor page or reusable partial.
+Renders this Razor page or reusable partial.
 
 ```html
 ﻿@{
@@ -342,7 +336,7 @@ Return to [all source files](/source/) or read [setup instructions](/start). The
 
 ## `sample/MvcEmployeeManagement/Views/Home/Privacy.cshtml`
 
-**File:** `sample/MvcEmployeeManagement/Views/Home/Privacy.cshtml` — **Use:** Renders this Razor page or reusable partial.
+Renders this Razor page or reusable partial.
 
 ```html
 ﻿@{
@@ -355,7 +349,7 @@ Return to [all source files](/source/) or read [setup instructions](/start). The
 
 ## `sample/MvcEmployeeManagement/Views/Shared/_Layout.cshtml`
 
-**File:** `sample/MvcEmployeeManagement/Views/Shared/_Layout.cshtml` — **Use:** Renders this Razor page or reusable partial.
+Renders this Razor page or reusable partial.
 
 ```html
 ﻿<!DOCTYPE html>
@@ -411,7 +405,7 @@ Return to [all source files](/source/) or read [setup instructions](/start). The
 
 ## `sample/MvcEmployeeManagement/Views/Shared/_Layout.cshtml.css`
 
-**File:** `sample/MvcEmployeeManagement/Views/Shared/_Layout.cshtml.css` — **Use:** Styles this page or application.
+Styles this page or application.
 
 ```css
 ﻿/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
@@ -466,7 +460,7 @@ button.accept-policy {
 
 ## `sample/MvcEmployeeManagement/Views/Shared/_ValidationScriptsPartial.cshtml`
 
-**File:** `sample/MvcEmployeeManagement/Views/Shared/_ValidationScriptsPartial.cshtml` — **Use:** Renders this Razor page or reusable partial.
+Renders this Razor page or reusable partial.
 
 ```html
 ﻿<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
@@ -475,7 +469,7 @@ button.accept-policy {
 
 ## `sample/MvcEmployeeManagement/Views/Shared/Error.cshtml`
 
-**File:** `sample/MvcEmployeeManagement/Views/Shared/Error.cshtml` — **Use:** Renders this Razor page or reusable partial.
+Renders this Razor page or reusable partial.
 
 ```html
 ﻿@model ErrorViewModel
@@ -507,7 +501,7 @@ button.accept-policy {
 
 ## `sample/MvcEmployeeManagement/wwwroot/css/site.css`
 
-**File:** `sample/MvcEmployeeManagement/wwwroot/css/site.css` — **Use:** Styles this page or application.
+Styles this page or application.
 
 ```css
 html {
@@ -546,7 +540,7 @@ body {
 
 ## `sample/MvcEmployeeManagement/wwwroot/js/site.js`
 
-**File:** `sample/MvcEmployeeManagement/wwwroot/js/site.js` — **Use:** Supplies application code or configuration required by this sample.
+Supplies application code or configuration required by this sample.
 
 ```javascript
 ﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification

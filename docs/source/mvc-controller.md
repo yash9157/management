@@ -1,14 +1,8 @@
 # MVC controllers
 
-Complete CRUD and home controllers.
-
-This page contains **complete file contents** for 2 files. Copy each block to the exact path shown. The code is embedded in this Markdown page and remains visible when the sample source directory is unavailable.
-
-Return to [all source files](/source/) or read [setup instructions](/start). The [source bundle](/sample-source.zip) also includes binary icons and license files.
-
 ## `sample/MvcEmployeeManagement/Controllers/EmployeesController.cs`
 
-**File:** `sample/MvcEmployeeManagement/Controllers/EmployeesController.cs` — **Use:** Implements the Employees HTTP actions.
+Implements the Employees HTTP actions.
 
 ```csharp
 using EmployeeManagement.Mvc.Data;
@@ -226,7 +220,7 @@ public class EmployeesController(AppDbContext dbContext) : Controller
 
 ## `sample/MvcEmployeeManagement/Controllers/HomeController.cs`
 
-**File:** `sample/MvcEmployeeManagement/Controllers/HomeController.cs` — **Use:** Implements the Home HTTP actions.
+Implements the Home HTTP actions.
 
 ```csharp
 using System.Diagnostics;

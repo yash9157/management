@@ -1,14 +1,8 @@
 # MVC bundled JavaScript
 
-Complete checked-in third-party JavaScript files used by Razor form validation.
-
-This page contains **complete file contents** for 2 files. Copy each block to the exact path shown. The code is embedded in this Markdown page and remains visible when the sample source directory is unavailable.
-
-Return to [all source files](/source/) or read [setup instructions](/start). The [source bundle](/sample-source.zip) also includes binary icons and license files.
-
 ## `sample/MvcEmployeeManagement/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js`
 
-**File:** `sample/MvcEmployeeManagement/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js` — **Use:** Provides the checked-in third-party client validation script.
+Provides the checked-in third-party client validation script.
 
 ```javascript
 /**
@@ -450,7 +444,7 @@ Return to [all source files](/source/) or read [setup instructions](/start). The
 
 ## `sample/MvcEmployeeManagement/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js`
 
-**File:** `sample/MvcEmployeeManagement/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js` — **Use:** Provides the checked-in third-party client validation script.
+Provides the checked-in third-party client validation script.
 
 ```javascript
 /**

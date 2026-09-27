@@ -1,14 +1,8 @@
 # Angular tests
 
-Complete checked-in component tests and test TypeScript configuration.
-
-This page contains **complete file contents** for 3 files. Copy each block to the exact path shown. The code is embedded in this Markdown page and remains visible when the sample source directory is unavailable.
-
-Return to [all source files](/source/) or read [setup instructions](/start). The [source bundle](/sample-source.zip) also includes binary icons and license files.
-
 ## `sample/Frontend/src/app/app.spec.ts`
 
-**File:** `sample/Frontend/src/app/app.spec.ts` — **Use:** Tests this Angular component.
+Tests this Angular component.
 
 ```typescript
 import { TestBed } from '@angular/core/testing';
@@ -32,7 +26,7 @@ describe('App', () => {
 
 ## `sample/Frontend/src/app/features/auth/register/register.component.spec.ts`
 
-**File:** `sample/Frontend/src/app/features/auth/register/register.component.spec.ts` — **Use:** Tests this Angular component.
+Tests this Angular component.
 
 ```typescript
 import { provideHttpClient } from '@angular/common/http';
@@ -78,7 +72,7 @@ describe('RegisterComponent', () => {
 
 ## `sample/Frontend/tsconfig.spec.json`
 
-**File:** `sample/Frontend/tsconfig.spec.json` — **Use:** Configures TypeScript compilation for this target.
+Configures TypeScript compilation for this target.
 
 ```json
 /* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */

@@ -1,14 +1,8 @@
 # MVC project and startup
 
-Complete project, solution, configuration, launch profile, tools, and application startup.
-
-This page contains **complete file contents** for 8 files. Copy each block to the exact path shown. The code is embedded in this Markdown page and remains visible when the sample source directory is unavailable.
-
-Return to [all source files](/source/) or read [setup instructions](/start). The [source bundle](/sample-source.zip) also includes binary icons and license files.
-
 ## `sample/MvcEmployeeManagement/appsettings.Development.json`
 
-**File:** `sample/MvcEmployeeManagement/appsettings.Development.json` — **Use:** Supplies application settings for this environment; development values are for local practice.
+Supplies application settings for this environment; development values are for local practice.
 
 ```json
 {
@@ -26,7 +20,7 @@ Return to [all source files](/source/) or read [setup instructions](/start). The
 
 ## `sample/MvcEmployeeManagement/appsettings.json`
 
-**File:** `sample/MvcEmployeeManagement/appsettings.json` — **Use:** Supplies application settings for this environment; development values are for local practice.
+Supplies application settings for this environment; development values are for local practice.
 
 ```json
 {
@@ -42,7 +36,7 @@ Return to [all source files](/source/) or read [setup instructions](/start). The
 
 ## `sample/MvcEmployeeManagement/dotnet-tools.json`
 
-**File:** `sample/MvcEmployeeManagement/dotnet-tools.json` — **Use:** Pins the local EF Core command-line tool.
+Pins the local EF Core command-line tool.
 
 ```json
 {
@@ -62,7 +56,7 @@ Return to [all source files](/source/) or read [setup instructions](/start). The
 
 ## `sample/MvcEmployeeManagement/EmployeeManagement.Mvc.csproj`
 
-**File:** `sample/MvcEmployeeManagement/EmployeeManagement.Mvc.csproj` — **Use:** Defines the .NET target framework and NuGet dependencies.
+Defines the .NET target framework and NuGet dependencies.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.Web">
@@ -86,7 +80,7 @@ Return to [all source files](/source/) or read [setup instructions](/start). The
 
 ## `sample/MvcEmployeeManagement/EmployeeManagement.Mvc.sln`
 
-**File:** `sample/MvcEmployeeManagement/EmployeeManagement.Mvc.sln` — **Use:** Defines the Visual Studio solution.
+Defines the Visual Studio solution.
 
 ```text
 ﻿
@@ -127,7 +121,7 @@ EndGlobal
 
 ## `sample/MvcEmployeeManagement/Program.cs`
 
-**File:** `sample/MvcEmployeeManagement/Program.cs` — **Use:** Configures services, middleware, routes, and development database migration.
+Configures services, middleware, routes, and development database migration.
 
 ```csharp
 using EmployeeManagement.Mvc.Data;
@@ -170,7 +164,7 @@ app.Run();
 
 ## `sample/MvcEmployeeManagement/Properties/launchSettings.json`
 
-**File:** `sample/MvcEmployeeManagement/Properties/launchSettings.json` — **Use:** Defines local HTTP and HTTPS launch profiles.
+Defines local HTTP and HTTPS launch profiles.
 
 ```json
 ﻿{
@@ -215,7 +209,7 @@ app.Run();
 
 ## `sample/MvcEmployeeManagement/README.md`
 
-**File:** `sample/MvcEmployeeManagement/README.md` — **Use:** Provides the sample project’s original README instructions.
+Provides the sample project’s original README instructions.
 
 ````markdown
 # Employee Management MVC practice project

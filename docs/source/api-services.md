@@ -1,14 +1,8 @@
 # API controllers and services
 
-Complete routes, authentication, employee CRUD, reporting, and error middleware.
-
-This page contains **complete file contents** for 9 files. Copy each block to the exact path shown. The code is embedded in this Markdown page and remains visible when the sample source directory is unavailable.
-
-Return to [all source files](/source/) or read [setup instructions](/start). The [source bundle](/sample-source.zip) also includes binary icons and license files.
-
 ## `sample/EmployeeManagement.Api/Controllers/AuthController.cs`
 
-**File:** `sample/EmployeeManagement.Api/Controllers/AuthController.cs` — **Use:** Implements the Auth HTTP actions.
+Implements the Auth HTTP actions.
 
 ```csharp
 using EmployeeManagement.Api.DTOs;
@@ -42,7 +36,7 @@ public class AuthController(AuthService authService) : ControllerBase
 
 ## `sample/EmployeeManagement.Api/Controllers/DashboardController.cs`
 
-**File:** `sample/EmployeeManagement.Api/Controllers/DashboardController.cs` — **Use:** Implements the Dashboard HTTP actions.
+Implements the Dashboard HTTP actions.
 
 ```csharp
 using EmployeeManagement.Api.Data;
@@ -74,7 +68,7 @@ public class DashboardController(AppDbContext dbContext, ReportService reportSer
 
 ## `sample/EmployeeManagement.Api/Controllers/DepartmentsController.cs`
 
-**File:** `sample/EmployeeManagement.Api/Controllers/DepartmentsController.cs` — **Use:** Implements the Departments HTTP actions.
+Implements the Departments HTTP actions.
 
 ```csharp
 using EmployeeManagement.Api.Data;
@@ -141,7 +135,7 @@ public class DepartmentsController(AppDbContext dbContext) : ControllerBase
 
 ## `sample/EmployeeManagement.Api/Controllers/EmployeesController.cs`
 
-**File:** `sample/EmployeeManagement.Api/Controllers/EmployeesController.cs` — **Use:** Implements the Employees HTTP actions.
+Implements the Employees HTTP actions.
 
 ```csharp
 using EmployeeManagement.Api.Data;
@@ -220,7 +214,7 @@ public class EmployeesController(IEmployeeService employeeService, AppDbContext 
 
 ## `sample/EmployeeManagement.Api/Controllers/SkillsController.cs`
 
-**File:** `sample/EmployeeManagement.Api/Controllers/SkillsController.cs` — **Use:** Implements the Skills HTTP actions.
+Implements the Skills HTTP actions.
 
 ```csharp
 using EmployeeManagement.Api.Data;
@@ -284,7 +278,7 @@ public class SkillsController(AppDbContext dbContext) : ControllerBase
 
 ## `sample/EmployeeManagement.Api/Middleware/ExceptionHandlingMiddleware.cs`
 
-**File:** `sample/EmployeeManagement.Api/Middleware/ExceptionHandlingMiddleware.cs` — **Use:** Converts application exceptions into HTTP problem responses.
+Converts application exceptions into HTTP problem responses.
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;
@@ -324,7 +318,7 @@ public class ExceptionHandlingMiddleware(RequestDelegate next, ILogger<Exception
 
 ## `sample/EmployeeManagement.Api/Services/AuthService.cs`
 
-**File:** `sample/EmployeeManagement.Api/Services/AuthService.cs` — **Use:** Implements Auth operations.
+Implements Auth operations.
 
 ```csharp
 using System.IdentityModel.Tokens.Jwt;
@@ -397,7 +391,7 @@ public class AuthService(AppDbContext dbContext, IConfiguration configuration)
 
 ## `sample/EmployeeManagement.Api/Services/EmployeeService.cs`
 
-**File:** `sample/EmployeeManagement.Api/Services/EmployeeService.cs` — **Use:** Implements Employee operations.
+Implements Employee operations.
 
 ```csharp
 using EmployeeManagement.Api.Data;
@@ -571,7 +565,7 @@ public class EmployeeService(AppDbContext dbContext) : IEmployeeService
 
 ## `sample/EmployeeManagement.Api/Services/ReportService.cs`
 
-**File:** `sample/EmployeeManagement.Api/Services/ReportService.cs` — **Use:** Implements Report operations.
+Implements Report operations.
 
 ```csharp
 using EmployeeManagement.Api.Data;
