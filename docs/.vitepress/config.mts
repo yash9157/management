@@ -8,7 +8,7 @@ export default defineConfig({
   themeConfig: {
     siteTitle: 'Employee Management',
     nav: [
-      { text: 'All files', link: '/source/' },
+      { text: 'Code', link: '/source/api-project' },
       { text: 'Setup', link: '/start' },
       { text: 'Download', link: '/sample-source.zip' }
     ],

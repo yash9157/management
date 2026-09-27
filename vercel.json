@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run docs:build",
+  "outputDirectory": "docs/.vitepress/dist",
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/", "destination": "/source/api-project", "permanent": false },
+    { "source": "/source", "destination": "/source/api-project", "permanent": false },
+    { "source": "/source/", "destination": "/source/api-project", "permanent": false }
+  ]
+}

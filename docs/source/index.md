@@ -1,3 +1,10 @@
+---
+head:
+  - - meta
+    - http-equiv: refresh
+      content: "0; url=/source/api-project"
+---
+
 # Source code
 
 ## EmployeeManagement.Api
