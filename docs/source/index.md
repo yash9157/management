@@ -13,12 +13,10 @@ head:
 - [Models and DTOs](/source/api-contracts)
 - [EF Core and migration](/source/api-data)
 - [Controllers and services](/source/api-services)
-- [Migration metadata](/source/api-generated)
 
 ## Frontend
 
 - [Project and bootstrap](/source/angular-project)
-- [Dependency lockfile](/source/angular-lockfile)
 - [Models and services](/source/angular-core)
 - [Login and registration](/source/angular-auth)
 - [Employee screens](/source/angular-employees)
@@ -31,5 +29,3 @@ head:
 - [Models and migration](/source/mvc-data)
 - [Controllers](/source/mvc-controller)
 - [Razor views and styles](/source/mvc-views)
-- [Bundled JavaScript](/source/mvc-vendor)
-- [Migration metadata](/source/mvc-generated)

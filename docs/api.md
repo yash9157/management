@@ -37,7 +37,7 @@ modelBuilder.Entity<Employee>()
 | `POST /api/employees/{id}/profile-image` | Admin | Optional profile image upload |
 | `GET /api/dashboard`, `GET /api/dashboard/department-counts` | Signed in | Optional totals and report |
 
-The core interview flow below uses login and employee CRUD. The [complete source](/source/) also contains the optional skill, image, and report paths so every checked-in coding file remains available.
+The core interview flow below uses login and employee CRUD. The [API code pages](/source/api-project) also show the optional skill, image, and report paths.
 
 ## Trace a list request
 

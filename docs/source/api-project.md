@@ -55,26 +55,6 @@ Supplies application settings for this environment; development values are for l
 }
 ```
 
-## `sample/EmployeeManagement.Api/dotnet-tools.json`
-
-Pins the local EF Core command-line tool.
-
-```json
-{
-  "version": 1,
-  "isRoot": true,
-  "tools": {
-    "dotnet-ef": {
-      "version": "8.0.31",
-      "commands": [
-        "dotnet-ef"
-      ],
-      "rollForward": false
-    }
-  }
-}
-```
-
 ## `sample/EmployeeManagement.Api/EmployeeManagement.Api.csproj`
 
 Defines the .NET target framework and NuGet dependencies.
@@ -100,36 +80,6 @@ Defines the .NET target framework and NuGet dependencies.
   </ItemGroup>
 
 </Project>
-```
-
-## `sample/EmployeeManagement.Api/EmployeeManagement.Api.http`
-
-Provides runnable API request examples.
-
-```http
-@baseUrl = http://localhost:5087/api
-@token = paste-token-from-login-response-here
-
-### Login
-POST {{baseUrl}}/auth/login
-Content-Type: application/json
-
-{
-  "username": "admin",
-  "password": "Admin123!"
-}
-
-### Paged employee list
-GET {{baseUrl}}/employees?search=&page=1&pageSize=10&sortBy=name&sortDirection=asc
-Authorization: Bearer {{token}}
-
-### Lookups
-GET {{baseUrl}}/departments/lookup
-Authorization: Bearer {{token}}
-
-### Stored procedure report
-GET {{baseUrl}}/dashboard/department-counts
-Authorization: Bearer {{token}}
 ```
 
 ## `sample/EmployeeManagement.Api/Program.cs`
@@ -225,52 +175,4 @@ if (app.Environment.IsDevelopment())
 app.Run();
 
 public partial class Program;
-```
-
-## `sample/EmployeeManagement.Api/Properties/launchSettings.json`
-
-Defines local HTTP and HTTPS launch profiles.
-
-```json
-﻿{
-  "$schema": "http://json.schemastore.org/launchsettings.json",
-  "iisSettings": {
-    "windowsAuthentication": false,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "http://localhost:58605",
-      "sslPort": 44360
-    }
-  },
-  "profiles": {
-    "http": {
-      "commandName": "Project",
-      "dotnetRunMessages": true,
-      "launchBrowser": true,
-      "launchUrl": "swagger",
-      "applicationUrl": "http://localhost:5087",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
-    "https": {
-      "commandName": "Project",
-      "dotnetRunMessages": true,
-      "launchBrowser": true,
-      "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:7087;http://localhost:5087",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
-    "IIS Express": {
-      "commandName": "IISExpress",
-      "launchBrowser": true,
-      "launchUrl": "swagger",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    }
-  }
-}
 ```

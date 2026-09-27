@@ -1,6 +1,6 @@
 # Angular request flow
 
-Angular runs in the browser and calls the API at `http://localhost:5087/api` using `HttpClient`. This page follows the login and employee CRUD path. The complete source pages also include the other checked-in features.
+Angular runs in the browser and calls the API at `http://localhost:5087/api` using `HttpClient`. This page follows the login and employee CRUD path. The [Angular code pages](/source/angular-project) also include the other application features.
 
 ## Routes
 
@@ -62,7 +62,7 @@ saveRequest.pipe(
 
 The image request is a second write, so an upload failure can happen after the employee record is saved. The [full file](/source/angular-employees) shows the surrounding form logic.
 
-Read the [complete Angular source](/source/#angular-frontend) to see each component, HTML template, service, guard, and model without opening the project files.
+Read the [Angular code pages](/source/angular-project) to see each component, HTML template, service, guard, and model without opening the project files.
 
 ## Debugging checkpoints
 

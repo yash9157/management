@@ -1,6 +1,6 @@
 # Interview practice
 
-Use these exercises after [starting the samples](/start). The [complete source pages](/source/) include every first-party coding file in full.
+Use these exercises after [starting the samples](/start). The [code pages](/source/api-project) show the application files used in the exercises.
 
 ## 1. Trace employee creation
 
@@ -37,4 +37,4 @@ Start the separate MVC app and create an employee. Submit a duplicate email. Bre
 | What do 401 and 403 mean? | 401 cannot authenticate; 403 is authenticated without the required role. |
 | MVC versus Angular? | MVC returns server-rendered HTML; Angular renders in the browser and calls JSON endpoints. |
 
-The docs show complete first-party source, not just excerpts. Lockfiles, icons, and vendor assets are in the [source bundle](/sample-source.zip).
+Lockfiles, icons, generated files, and vendor assets are in the [source bundle](/sample-source.zip).

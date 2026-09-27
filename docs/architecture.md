@@ -59,6 +59,6 @@ The diagram shows process and data boundaries. The MVC application renders Razor
 | `sample/MvcEmployeeManagement/Controllers/EmployeesController.cs` | GET/POST actions, queries, validation, redirects |
 | `sample/MvcEmployeeManagement/Views/Employees/` | List, Create, Edit, Details, Delete, shared form partial |
 
-## Read the complete source here
+## Read the code
 
-The [source pages](/source/) print every first-party coding and configuration file in full, including migrations and Angular templates. The [source bundle](/sample-source.zip) includes dependency lockfiles and binary/vendor assets. SQL Server, .NET, and Node.js must still be installed separately.
+The [code pages](/source/api-project) show application files, including migration classes and Angular templates. The [source bundle](/sample-source.zip) also includes dependency lockfiles, generated migration metadata, and vendor assets. SQL Server, .NET, and Node.js must still be installed separately.

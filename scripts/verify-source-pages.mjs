@@ -3,9 +3,13 @@ import path from 'node:path'
 
 const sourceRoot = path.resolve('sample')
 const docsRoot = path.resolve('docs/source')
-const ignoredDirectories = new Set(['bin', 'obj', 'node_modules', 'dist', '.angular', '.vs', '.git'])
-const codeExtensions = new Set(['.cs', '.cshtml', '.ts', '.html', '.scss', '.css', '.json', '.sln', '.csproj', '.http', '.js', '.md'])
-const extraNames = new Set(['.gitignore', '.editorconfig', '.prettierrc'])
+const ignoredDirectories = new Set(['bin', 'obj', 'node_modules', 'dist', '.angular', '.vs', '.vscode', '.git'])
+const ignoredFiles = new Set([
+  'EmployeeManagement.Api.csproj.user', 'favicon.ico', '.gitignore', '.editorconfig',
+  '.prettierrc', 'package-lock.json', 'dotnet-tools.json', 'launchSettings.json',
+  'AppDbContextModelSnapshot.cs'
+])
+const codeExtensions = new Set(['.cs', '.cshtml', '.ts', '.html', '.scss', '.css', '.json', '.csproj', '.js'])
 
 async function sourceFiles(directory) {
   const files = []
@@ -15,9 +19,9 @@ async function sourceFiles(directory) {
       if (!ignoredDirectories.has(entry.name)) files.push(...await sourceFiles(fullPath))
       continue
     }
-    if (!entry.isFile() || entry.name.endsWith('.csproj.user')) continue
-    if (fullPath.includes(`${path.sep}wwwroot${path.sep}lib${path.sep}`) && !entry.name.endsWith('.js')) continue
-    if (codeExtensions.has(path.extname(entry.name)) || extraNames.has(entry.name)) files.push(fullPath)
+    if (!entry.isFile() || ignoredFiles.has(entry.name) || entry.name.endsWith('.Designer.cs')) continue
+    if (fullPath.includes(`${path.sep}wwwroot${path.sep}lib${path.sep}`)) continue
+    if (codeExtensions.has(path.extname(entry.name))) files.push(fullPath)
   }
   return files
 }
@@ -54,4 +58,4 @@ for (const file of source) {
 for (const relative of embedded.keys()) {
   if (!expected.has(relative)) throw new Error(`Docs contain a removed source file: ${relative}`)
 }
-console.log(`Verified ${source.length} complete source files in ${await readdir(docsRoot).then(items => items.filter(item => item.endsWith('.md') && item !== 'index.md').length)} documentation pages.`)
+console.log(`Verified ${source.length} documented application files in ${await readdir(docsRoot).then(items => items.filter(item => item.endsWith('.md') && item !== 'index.md').length)} documentation pages.`)

@@ -1,6 +1,6 @@
 # Rebuild from the documentation
 
-This page is for the interview constraint: **you can read the docs but cannot browse the source repository**. The [complete source pages](/source/) show each first-party file in full, with its path and purpose. The [downloadable bundle](/sample-source.zip) provides an exact copy when downloads are allowed.
+This page is for the interview constraint: **you can read the docs but cannot browse the source repository**. The [code pages](/source/api-project) show the application files with their paths and purposes. The [downloadable bundle](/sample-source.zip) provides the full project trees when downloads are allowed.
 
 ## Fastest path: download the bundle
 
@@ -12,13 +12,13 @@ The archive includes project files, migration code and metadata, Angular lockfil
 
 ## Manual path: copy files from the pages
 
-Create the exact directory tree shown by each **File** label and copy the entire code block into that path. Start with the project/startup page, then contracts/models, data/migrations, behavior, and UI files. Keep file extensions and capitalization. The source pages include the migration designer and snapshot files for a faithful EF Core project.
+Create the directory tree shown by each file heading and copy the code block into that path. Start with the project/startup page, then contracts/models, data/migrations, behavior, and UI files. Keep file extensions and capitalization. For an exact runnable project, use the bundle for lockfiles, generated migration metadata, and other tooling files.
 
-The source pages embed all first-party text. For the exact Angular dependency tree and the MVC project's bundled browser libraries, use the ZIP. If the ZIP is unavailable, `npm install` can produce a new Angular lockfile from `package.json`; the MVC layout's vendor CSS/JS must be restored separately before the pages look and validate exactly like this sample.
+The source pages focus on application code. The run commands below assume you extracted the ZIP, which also supplies launch profiles, migration tooling files, the Angular lockfile, and the MVC project's bundled browser libraries. If the ZIP is unavailable, `npm install` can produce a new Angular lockfile from `package.json`; the MVC layout's vendor CSS/JS must be restored separately before the pages look and validate exactly like this sample.
 
 ## API + Angular steps
 
-1. Copy or extract all files listed under the [API source pages](/source/#aspnet-core-api) and [Angular source pages](/source/#angular-frontend).
+1. Copy or extract the files under the [API code pages](/source/api-project) and [Angular code pages](/source/angular-project). Use the bundle when you need the complete runnable projects.
 2. Start SQL Server Express. The API development setting targets `.\\SQLEXPRESS` and database `EmployeeManagementInterviewDb`.
 3. In the API directory, restore/build/run. Development startup applies the migration and seeds reference data plus local demo accounts.
 
@@ -44,7 +44,7 @@ Open `http://localhost:4200`. The API URL comes from `sample/Frontend/src/enviro
 
 ## MVC steps
 
-1. Copy or extract all files listed under the [MVC source pages](/source/#standalone-mvc).
+1. Copy or extract the files under the [MVC code pages](/source/mvc-project). Use the bundle when you need the complete runnable project.
 2. Start SQL Server Express. MVC targets its own database, `EmployeeManagementMvcInterviewDb`.
 
 **Working directory: `sample/MvcEmployeeManagement`. Purpose: restore and run the reconstructed Razor app.**

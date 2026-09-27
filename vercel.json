@@ -6,6 +6,10 @@
   "redirects": [
     { "source": "/", "destination": "/source/api-project", "permanent": false },
     { "source": "/source", "destination": "/source/api-project", "permanent": false },
-    { "source": "/source/", "destination": "/source/api-project", "permanent": false }
+    { "source": "/source/", "destination": "/source/api-project", "permanent": false },
+    { "source": "/source/api-generated", "destination": "/source/api-data", "permanent": false },
+    { "source": "/source/angular-lockfile", "destination": "/source/angular-project", "permanent": false },
+    { "source": "/source/mvc-generated", "destination": "/source/mvc-data", "permanent": false },
+    { "source": "/source/mvc-vendor", "destination": "/source/mvc-views", "permanent": false }
   ]
 }

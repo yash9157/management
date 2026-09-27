@@ -22,8 +22,7 @@ export default defineConfig({
             { text: 'Project and startup', link: '/source/api-project' },
             { text: 'Models and DTOs', link: '/source/api-contracts' },
             { text: 'EF Core and migration', link: '/source/api-data' },
-            { text: 'Controllers and services', link: '/source/api-services' },
-            { text: 'Migration metadata', link: '/source/api-generated' }
+            { text: 'Controllers and services', link: '/source/api-services' }
           ]
         },
         {
@@ -32,7 +31,6 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: 'Project and bootstrap', link: '/source/angular-project' },
-            { text: 'Dependency lockfile', link: '/source/angular-lockfile' },
             { text: 'Models and services', link: '/source/angular-core' },
             { text: 'Login and registration', link: '/source/angular-auth' },
             { text: 'Employee screens', link: '/source/angular-employees' },
@@ -48,9 +46,7 @@ export default defineConfig({
             { text: 'Project and startup', link: '/source/mvc-project' },
             { text: 'Models and migration', link: '/source/mvc-data' },
             { text: 'Controllers', link: '/source/mvc-controller' },
-            { text: 'Razor views and styles', link: '/source/mvc-views' },
-            { text: 'Bundled JavaScript', link: '/source/mvc-vendor' },
-            { text: 'Migration metadata', link: '/source/mvc-generated' }
+            { text: 'Razor views and styles', link: '/source/mvc-views' }
           ]
         }
       ]
