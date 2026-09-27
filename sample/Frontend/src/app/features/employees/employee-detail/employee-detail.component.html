@@ -1,0 +1,26 @@
+<main class="container py-4">
+  <a class="text-decoration-none" routerLink="/employees">← Back to employees</a>
+  @if (loading) {
+    <div class="text-center py-5"><div class="spinner-border text-primary"></div></div>
+  } @else if (errorMessage) {
+    <div class="alert alert-danger mt-4">{{ errorMessage }}</div>
+  } @else if (employee) {
+    <section class="page-card p-4 mt-3">
+      <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-4 border-bottom pb-4 mb-4">
+        @if (profileImageUrl) { <img class="profile-image rounded-circle border" [src]="profileImageUrl" alt="Profile image"> }
+        @else { <div class="initials rounded-circle bg-primary-subtle text-primary d-flex align-items-center justify-content-center fw-bold">{{ employee.firstName[0] }}{{ employee.lastName[0] }}</div> }
+        <div class="flex-grow-1"><div class="d-flex align-items-center gap-2"><h1 class="h3 mb-0">{{ employee.firstName }} {{ employee.lastName }}</h1><span class="badge" [class.text-bg-success]="employee.isActive" [class.text-bg-secondary]="!employee.isActive">{{ employee.isActive ? 'Active' : 'Inactive' }}</span></div><p class="text-secondary mb-0 mt-1">{{ employee.departmentName }} · {{ employee.employmentType }}</p></div>
+        @if (authService.isAdmin) { <a class="btn btn-primary" [routerLink]="['/employees', employee.employeeId, 'edit']">Edit employee</a> }
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4"><div class="text-secondary small">Email</div><div>{{ employee.email }}</div></div>
+        <div class="col-md-6 col-lg-4"><div class="text-secondary small">Phone</div><div>{{ employee.phone }}</div></div>
+        <div class="col-md-6 col-lg-4"><div class="text-secondary small">Salary</div><div>{{ employee.salary | currency:'INR' }}</div></div>
+        <div class="col-md-6 col-lg-4"><div class="text-secondary small">Date of birth</div><div>{{ employee.dateOfBirth | date:'longDate' }}</div></div>
+        <div class="col-md-6 col-lg-4"><div class="text-secondary small">Joining date</div><div>{{ employee.joiningDate | date:'longDate' }}</div></div>
+        <div class="col-md-6 col-lg-4"><div class="text-secondary small">Gender</div><div>{{ employee.gender }}</div></div>
+        <div class="col-12"><div class="text-secondary small mb-2">Skills</div>@if (employee.skills.length) { @for (skill of employee.skills; track skill.id) { <span class="badge text-bg-light border me-2 mb-2">{{ skill.name }}</span> } } @else { <span class="text-secondary">No skills selected</span> }</div>
+      </div>
+    </section>
+  }
+</main>

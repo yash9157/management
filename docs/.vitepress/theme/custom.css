@@ -1,0 +1,49 @@
+:root {
+  --vp-c-brand-1: #087e78;
+  --vp-c-brand-2: #0b6e69;
+  --vp-c-brand-3: #075a56;
+  --vp-c-brand-soft: rgba(8, 126, 120, 0.12);
+  --vp-font-family-base: 'Segoe UI', Inter, system-ui, sans-serif;
+}
+
+.dark {
+  --vp-c-brand-1: #53d6c5;
+  --vp-c-brand-2: #42b9aa;
+  --vp-c-brand-3: #269b90;
+  --vp-c-brand-soft: rgba(83, 214, 197, 0.14);
+}
+
+.VPHome {
+  background: radial-gradient(circle at 75% 5%, rgba(22, 163, 154, 0.12), transparent 35%);
+}
+
+.VPHomeHero .name {
+  letter-spacing: -0.045em;
+}
+
+.VPHomeHero .text {
+  max-width: 740px;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.13;
+}
+
+.VPFeature {
+  border-radius: 18px !important;
+}
+
+.vp-doc table {
+  display: table;
+  width: 100%;
+}
+
+.vp-doc th {
+  white-space: nowrap;
+}
+
+.lab-callout {
+  border-left: 4px solid var(--vp-c-brand-1);
+  padding: 1rem 1.25rem;
+  border-radius: 0 12px 12px 0;
+  background: var(--vp-c-brand-soft);
+  margin: 1.5rem 0;
+}

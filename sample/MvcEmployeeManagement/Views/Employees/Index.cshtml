@@ -1,0 +1,103 @@
+@model EmployeeListViewModel
+@{
+    ViewData["Title"] = "Employees";
+}
+
+<div class="d-flex justify-content-between align-items-center gap-3 mb-4">
+    <div>
+        <h1 class="h3 mb-1">Employees</h1>
+        <p class="text-secondary mb-0">Search and manage employee records.</p>
+    </div>
+    <a class="btn btn-primary" asp-action="Create">Add employee</a>
+</div>
+
+@if (TempData["SuccessMessage"] is string message)
+{
+    <div class="alert alert-success" role="status">@message</div>
+}
+
+<form asp-action="Index" method="get" class="content-card p-3 p-lg-4 mb-3">
+    <div class="row g-3 align-items-end">
+        <div class="col-md-4">
+            <label asp-for="Search" class="form-label"></label>
+            <input asp-for="Search" class="form-control" placeholder="Name or email" />
+        </div>
+        <div class="col-md-3">
+            <label asp-for="DepartmentId" class="form-label">Department</label>
+            <select asp-for="DepartmentId" asp-items="Model.Departments" class="form-select">
+                <option value="">All departments</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label asp-for="SortBy" class="form-label">Sort by</label>
+            <select asp-for="SortBy" class="form-select">
+                <option value="name">Name</option>
+                <option value="email">Email</option>
+                <option value="salary">Salary</option>
+                <option value="joiningDate">Joining date</option>
+                <option value="department">Department</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label asp-for="Direction" class="form-label">Direction</label>
+            <select asp-for="Direction" class="form-select">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </select>
+        </div>
+        <div class="col-md-1 d-grid">
+            <button class="btn btn-outline-primary" type="submit">Apply</button>
+        </div>
+    </div>
+</form>
+
+<section class="content-card overflow-hidden">
+    @if (Model.Employees.Count == 0)
+    {
+        <div class="text-center p-5">
+            <h2 class="h5">No employees found</h2>
+            <p class="text-secondary mb-0">Try another search, or add your first employee.</p>
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                    <tr><th>Name</th><th>Email</th><th>Department</th><th>Salary</th><th>Joined</th><th>Status</th><th class="text-end">Actions</th></tr>
+                </thead>
+                <tbody>
+                    @foreach (var employee in Model.Employees)
+                    {
+                        <tr>
+                            <td class="fw-semibold">@employee.FirstName @employee.LastName</td>
+                            <td>@employee.Email</td>
+                            <td>@employee.Department.Name</td>
+                            <td>@employee.Salary.ToString("N2")</td>
+                            <td>@employee.JoiningDate.ToString("dd MMM yyyy")</td>
+                            <td><span class="badge @(employee.IsActive ? "text-bg-success" : "text-bg-secondary")">@(employee.IsActive ? "Active" : "Inactive")</span></td>
+                            <td class="text-end text-nowrap">
+                                <a class="btn btn-sm btn-outline-primary" asp-action="Details" asp-route-id="@employee.EmployeeId">View</a>
+                                <a class="btn btn-sm btn-outline-secondary" asp-action="Edit" asp-route-id="@employee.EmployeeId">Edit</a>
+                                <a class="btn btn-sm btn-outline-danger" asp-action="Delete" asp-route-id="@employee.EmployeeId">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="d-flex justify-content-between align-items-center p-3 border-top">
+            <span class="text-secondary">@Model.TotalCount employee(s) · Page @Model.Page of @Model.TotalPages</span>
+            <div class="btn-group" role="group" aria-label="Pagination">
+                @if (Model.Page > 1)
+                {
+                    <a class="btn btn-outline-primary" asp-action="Index" asp-route-search="@Model.Search" asp-route-departmentId="@Model.DepartmentId" asp-route-sortBy="@Model.SortBy" asp-route-direction="@Model.Direction" asp-route-page="@(Model.Page - 1)">Previous</a>
+                }
+                @if (Model.Page < Model.TotalPages)
+                {
+                    <a class="btn btn-outline-primary" asp-action="Index" asp-route-search="@Model.Search" asp-route-departmentId="@Model.DepartmentId" asp-route-sortBy="@Model.SortBy" asp-route-direction="@Model.Direction" asp-route-page="@(Model.Page + 1)">Next</a>
+                }
+            </div>
+        </div>
+    }
+</section>

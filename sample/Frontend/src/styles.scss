@@ -1,0 +1,6 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+body { background: #f4f6f9; color: #253047; }
+.page-card { background: #fff; border: 1px solid #e4e8ef; border-radius: .75rem; box-shadow: 0 .25rem 1rem rgba(26, 39, 64, .05); }
+.required-label::after { color: #dc3545; content: ' *'; }
+.table th button { color: inherit; font-weight: 600; text-decoration: none; }

@@ -1,0 +1,23 @@
+@baseUrl = http://localhost:5087/api
+@token = paste-token-from-login-response-here
+
+### Login
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "Admin123!"
+}
+
+### Paged employee list
+GET {{baseUrl}}/employees?search=&page=1&pageSize=10&sortBy=name&sortDirection=asc
+Authorization: Bearer {{token}}
+
+### Lookups
+GET {{baseUrl}}/departments/lookup
+Authorization: Bearer {{token}}
+
+### Stored procedure report
+GET {{baseUrl}}/dashboard/department-counts
+Authorization: Bearer {{token}}

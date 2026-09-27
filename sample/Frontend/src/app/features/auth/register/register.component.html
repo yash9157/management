@@ -1,0 +1,40 @@
+<main class="login-page d-flex align-items-center py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-10 col-md-7 col-lg-5 col-xl-4">
+        <div class="card border-0 shadow-lg">
+          <div class="card-body p-4 p-lg-5">
+            <h1 class="h3 fw-bold mb-2">Create an account</h1>
+            <p class="text-secondary mb-4">Registered accounts can view employee records.</p>
+            @if (errorMessage) { <div class="alert alert-danger" role="alert">{{ errorMessage }}</div> }
+            <form [formGroup]="form" (ngSubmit)="register()" novalidate>
+              <div class="mb-3">
+                <label class="form-label required-label" for="username">Username</label>
+                <input class="form-control" id="username" formControlName="username" autocomplete="username"
+                       [class.is-invalid]="form.controls.username.touched && form.controls.username.invalid">
+                <div class="invalid-feedback">Use 3–80 letters, numbers, dots, underscores or hyphens.</div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label required-label" for="password">Password</label>
+                <input class="form-control" id="password" type="password" formControlName="password" autocomplete="new-password"
+                       [class.is-invalid]="form.controls.password.touched && form.controls.password.invalid">
+                <div class="invalid-feedback">Use 8–72 characters with at least one letter and one number.</div>
+              </div>
+              <div class="mb-4">
+                <label class="form-label required-label" for="confirmPassword">Confirm password</label>
+                <input class="form-control" id="confirmPassword" type="password" formControlName="confirmPassword" autocomplete="new-password"
+                       [class.is-invalid]="form.controls.confirmPassword.touched && (form.controls.confirmPassword.invalid || passwordsDoNotMatch)">
+                <div class="invalid-feedback">Passwords must match.</div>
+              </div>
+              <button class="btn btn-primary w-100" type="submit" [disabled]="loading">
+                @if (loading) { <span class="spinner-border spinner-border-sm me-2"></span> }
+                Create account
+              </button>
+            </form>
+            <p class="text-center text-secondary small mb-0 mt-4">Already have an account? <a routerLink="/login">Sign in</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

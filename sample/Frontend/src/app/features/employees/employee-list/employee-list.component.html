@@ -1,0 +1,89 @@
+<main class="container py-4">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <div><h1 class="h3 mb-1">Employees</h1><p class="text-secondary mb-0">Search, filter and manage employee records.</p></div>
+    @if (authService.isAdmin) { <a class="btn btn-primary" routerLink="/employees/new">Add employee</a> }
+  </div>
+
+  <section class="page-card p-3 p-lg-4 mb-3">
+    <div class="row g-3">
+      <div class="col-12 col-lg-4">
+        <label class="form-label" for="search">Search</label>
+        <input class="form-control" id="search" [formControl]="searchControl" placeholder="Name or email">
+      </div>
+      <div class="col-6 col-lg-2">
+        <label class="form-label" for="department">Department</label>
+        <select class="form-select" id="department" [(ngModel)]="departmentFilter" (ngModelChange)="filtersChanged()">
+          <option [ngValue]="undefined">All</option>
+          @for (item of departments; track item.id) { <option [ngValue]="item.id">{{ item.name }}</option> }
+        </select>
+      </div>
+      <div class="col-6 col-lg-2">
+        <label class="form-label" for="skill">Skill</label>
+        <select class="form-select" id="skill" [(ngModel)]="skillFilter" (ngModelChange)="filtersChanged()">
+          <option [ngValue]="undefined">All</option>
+          @for (item of skills; track item.id) { <option [ngValue]="item.id">{{ item.name }}</option> }
+        </select>
+      </div>
+      <div class="col-6 col-lg-2">
+        <label class="form-label" for="active">Status</label>
+        <select class="form-select" id="active" [(ngModel)]="activeFilter" (ngModelChange)="filtersChanged()">
+          <option value="">All</option><option value="true">Active</option><option value="false">Inactive</option>
+        </select>
+      </div>
+      <div class="col-6 col-lg-2">
+        <label class="form-label" for="employmentType">Type</label>
+        <select class="form-select" id="employmentType" [(ngModel)]="employmentTypeFilter" (ngModelChange)="filtersChanged()">
+          <option value="">All</option><option>Full-time</option><option>Part-time</option><option>Contract</option><option>Intern</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-card overflow-hidden">
+    @if (loading) {
+      <div class="text-center py-5"><div class="spinner-border text-primary"></div><p class="text-secondary mt-2 mb-0">Loading employees…</p></div>
+    } @else if (errorMessage) {
+      <div class="p-4"><div class="alert alert-danger mb-0">{{ errorMessage }}</div></div>
+    } @else if (employees.length === 0) {
+      <div class="text-center py-5"><h2 class="h5">No employees found</h2><p class="text-secondary">Try changing your filters.</p></div>
+    } @else {
+      <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="table-light"><tr>
+            <th><button class="btn btn-link p-0" type="button" (click)="sort('name')">Name {{ sortBy === 'name' ? (sortDirection === 'asc' ? '↑' : '↓') : '' }}</button></th>
+            <th><button class="btn btn-link p-0" type="button" (click)="sort('email')">Email {{ sortBy === 'email' ? (sortDirection === 'asc' ? '↑' : '↓') : '' }}</button></th>
+            <th><button class="btn btn-link p-0" type="button" (click)="sort('department')">Department {{ sortBy === 'department' ? (sortDirection === 'asc' ? '↑' : '↓') : '' }}</button></th>
+            <th>Type</th><th><button class="btn btn-link p-0" type="button" (click)="sort('joiningDate')">Joined</button></th><th>Status</th><th class="text-end">Actions</th>
+          </tr></thead>
+          <tbody>
+            @for (employee of employees; track employee.employeeId) {
+              <tr>
+                <td><div class="fw-semibold">{{ employee.firstName }} {{ employee.lastName }}</div><small class="text-secondary">{{ employee.salary | currency:'INR':'symbol':'1.0-0' }}</small></td>
+                <td>{{ employee.email }}</td><td>{{ employee.departmentName }}</td><td>{{ employee.employmentType }}</td><td>{{ employee.joiningDate | date:'mediumDate' }}</td>
+                <td><span class="badge" [class.text-bg-success]="employee.isActive" [class.text-bg-secondary]="!employee.isActive">{{ employee.isActive ? 'Active' : 'Inactive' }}</span></td>
+                <td class="text-end text-nowrap">
+                  <a class="btn btn-sm btn-outline-primary me-1" [routerLink]="['/employees', employee.employeeId]">View</a>
+                  @if (authService.isAdmin) {
+                    <a class="btn btn-sm btn-outline-secondary me-1" [routerLink]="['/employees', employee.employeeId, 'edit']">Edit</a>
+                    <button class="btn btn-sm btn-outline-danger" type="button" (click)="confirmDelete(employee)">Delete</button>
+                  }
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 p-3 border-top">
+        <div class="d-flex align-items-center gap-2 text-secondary"><span>{{ totalCount }} total</span><select class="form-select form-select-sm w-auto" [(ngModel)]="pageSize" (ngModelChange)="changePageSize()"><option [ngValue]="5">5</option><option [ngValue]="10">10</option><option [ngValue]="25">25</option></select></div>
+        <app-pagination [page]="page" [totalPages]="totalPages" (pageChange)="changePage($event)" />
+      </div>
+    }
+  </section>
+</main>
+
+<app-confirm-dialog
+  [open]="employeeToDelete !== null"
+  title="Delete employee"
+  [message]="'Delete ' + (employeeToDelete?.firstName ?? '') + ' ' + (employeeToDelete?.lastName ?? '') + '? This cannot be undone.'"
+  (confirmed)="deleteEmployee()"
+  (cancelled)="employeeToDelete = null" />

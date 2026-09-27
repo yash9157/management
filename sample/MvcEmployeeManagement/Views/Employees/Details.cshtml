@@ -1,0 +1,31 @@
+@model Employee
+@{
+    ViewData["Title"] = "Employee details";
+}
+
+<a asp-action="Index" class="text-decoration-none">← Back to employees</a>
+@if (TempData["SuccessMessage"] is string message)
+{
+    <div class="alert alert-success mt-3" role="status">@message</div>
+}
+<section class="content-card p-4 mt-3">
+    <div class="d-flex justify-content-between align-items-start gap-3 border-bottom pb-3 mb-4">
+        <div>
+            <h1 class="h3 mb-1">@Model.FirstName @Model.LastName</h1>
+            <span class="text-secondary">@Model.Department.Name · @Model.EmploymentType</span>
+        </div>
+        <div class="d-flex gap-2">
+            <a asp-action="Edit" asp-route-id="@Model.EmployeeId" class="btn btn-primary">Edit</a>
+            <a asp-action="Delete" asp-route-id="@Model.EmployeeId" class="btn btn-outline-danger">Delete</a>
+        </div>
+    </div>
+    <div class="row g-4">
+        <div class="col-md-6"><div class="text-secondary small">Email</div><div>@Model.Email</div></div>
+        <div class="col-md-6"><div class="text-secondary small">Phone</div><div>@Model.Phone</div></div>
+        <div class="col-md-6"><div class="text-secondary small">Salary</div><div>@Model.Salary.ToString("N2")</div></div>
+        <div class="col-md-6"><div class="text-secondary small">Date of birth</div><div>@Model.DateOfBirth.ToString("dd MMM yyyy")</div></div>
+        <div class="col-md-6"><div class="text-secondary small">Joining date</div><div>@Model.JoiningDate.ToString("dd MMM yyyy")</div></div>
+        <div class="col-md-6"><div class="text-secondary small">Gender</div><div>@Model.Gender</div></div>
+        <div class="col-md-6"><div class="text-secondary small">Status</div><div>@(Model.IsActive ? "Active" : "Inactive")</div></div>
+    </div>
+</section>

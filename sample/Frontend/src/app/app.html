@@ -1,0 +1,16 @@
+@if (authService.currentUser$ | async; as user) {
+  <nav class="navbar navbar-dark bg-primary shadow-sm">
+    <div class="container d-flex flex-nowrap">
+      <a class="navbar-brand fw-semibold" routerLink="/dashboard">Employee Manager</a>
+      <div class="navbar-nav flex-row gap-2 me-auto">
+        <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+        <a class="nav-link" routerLink="/employees" routerLinkActive="active">Employees</a>
+      </div>
+      <span class="navbar-text me-3 d-none d-md-inline">{{ user.username }} · {{ user.role }}</span>
+      <button class="btn btn-outline-light btn-sm" type="button" (click)="logout()">Logout</button>
+    </div>
+  </nav>
+}
+
+<app-notification />
+<router-outlet />

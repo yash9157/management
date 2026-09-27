@@ -1,0 +1,75 @@
+@model EmployeeFormViewModel
+
+<div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+<div class="row g-3">
+    <div class="col-md-6">
+        <label asp-for="FirstName" class="form-label"></label>
+        <input asp-for="FirstName" class="form-control" />
+        <span asp-validation-for="FirstName" class="text-danger small"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="LastName" class="form-label"></label>
+        <input asp-for="LastName" class="form-control" />
+        <span asp-validation-for="LastName" class="text-danger small"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger small"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="Phone" class="form-label"></label>
+        <input asp-for="Phone" class="form-control" />
+        <span asp-validation-for="Phone" class="text-danger small"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="Salary" class="form-label"></label>
+        <input asp-for="Salary" class="form-control" type="number" min="0" step="0.01" />
+        <span asp-validation-for="Salary" class="text-danger small"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="DepartmentId" class="form-label"></label>
+        <select asp-for="DepartmentId" asp-items="Model.Departments" class="form-select">
+            <option value="0">Select a department</option>
+        </select>
+        <span asp-validation-for="DepartmentId" class="text-danger small"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="DateOfBirth" class="form-label"></label>
+        <input asp-for="DateOfBirth" class="form-control" type="date" />
+        <span asp-validation-for="DateOfBirth" class="text-danger small"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="JoiningDate" class="form-label"></label>
+        <input asp-for="JoiningDate" class="form-control" type="date" />
+        <span asp-validation-for="JoiningDate" class="text-danger small"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="Gender" class="form-label"></label>
+        <select asp-for="Gender" class="form-select">
+            <option value="">Select gender</option>
+            @foreach (var gender in EmployeeFormViewModel.Genders)
+            {
+                <option value="@gender">@gender</option>
+            }
+        </select>
+        <span asp-validation-for="Gender" class="text-danger small"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="EmploymentType" class="form-label"></label>
+        <select asp-for="EmploymentType" class="form-select">
+            <option value="">Select employment type</option>
+            @foreach (var type in EmployeeFormViewModel.EmploymentTypes)
+            {
+                <option value="@type">@type</option>
+            }
+        </select>
+        <span asp-validation-for="EmploymentType" class="text-danger small"></span>
+    </div>
+    <div class="col-12">
+        <div class="form-check">
+            <input asp-for="IsActive" class="form-check-input" />
+            <label asp-for="IsActive" class="form-check-label"></label>
+        </div>
+    </div>
+</div>
